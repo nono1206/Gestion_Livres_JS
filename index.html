@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion de livres</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>GESTION DE LIVRES</h1>
+
+    <form id="formulaireLivre">
+        <label for="titreLivre">Titre :</label>
+        <input type="text" id="titreLivre" placeholder="Titre du livre" required>
+
+        <label for="auteurLivre">Auteur :</label>
+        <input type="text" id="auteurLivre" placeholder="Auteur" required>
+
+        <label for="anneeLivre">Année :</label>
+        <input type="number" id="anneeLivre" placeholder="Année" required min="1">
+
+        <label for="genreLivre">Genre :</label>
+        <select id="genreLivre" required>
+            <option value="">-- Sélectionnez un genre --</option>
+            <option value="Roman">Roman</option>
+            <option value="Science">Science</option>
+            <option value="Fantasy">Fantasie</option>
+            <option value="Policier">Policier</option>
+            <option value="Biographique">Biographique</option>
+            <option value="Histoire">Histoire</option>
+            <option value="Cuisine">Cuisine</option>
+            <option value="BD">Bande-dessinée</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Autre">Autre</option>
+        </select>
+
+        <button type="submit">Ajouter</button>
+
+        <input type="text" id="rechercheLivre" placeholder="Rechercher par titre ou auteur...">
+        <div class="boutons-tri">
+            <button type="button"  id="trierAnnee">Trier par année</button>
+             <button type="button"  id="trierAuteur">Trier par auteur</button>
+
+        </div>
+    </form>
+
+    <div class="planning">
+        <div class="livre" id="livre1">
+            <h2>Livre 1</h2>
+            <p><strong>Titre :</strong> La femme de ménage</p>
+            <p><strong>Auteur :</strong> Freida McFadden</p>
+            <p><strong>Année :</strong> 2023</p>
+            <p><strong>Genre :</strong> Thriller</p>
+        </div>
+
+        <div class="livre" id="livre2">
+            <h2>Livre 2</h2>
+            <p><strong>Titre :</strong> Une année en cuisine avec Laurent Mariotte</p>
+            <p><strong>Auteur :</strong> Laurent Mariotte</p>
+            <p><strong>Année :</strong> 2025</p>
+            <p><strong>Genre :</strong> Cuisine</p>
+        </div>
+
+        <div id="livresAjouter"></div>
+    </div>
+</body>
+
+</html>
